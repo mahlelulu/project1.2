@@ -32,13 +32,13 @@ function formatDate(date){
   let apiUrl= `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`
  axios.get(apiUrl).then(displayTemperature);
 
- 
+   }
 function enterCity(event) {
     event.preventDefault();
     let inputType = document.querySelector("#search-input");
     searchCity(inputType.value)
     
-  }
+  
    }
     
     let country = document.querySelector("#form-search");
