@@ -19,10 +19,12 @@ function formatDate(date){
     let days=["sunday","monday","tuesday","wednesday","thursday","friday","saturday" ]
     let hour=date.getHours();
     let minute= date.getMinutes();
-    let day =days[date.getDay()];
-    if (minutes < 10) {
-        minutes = `0${minutes}`;
+    if (minute < 10) {
+        minute = `0${minute}`;
     }
+    let day =days[date.getDay()];
+
+    
     return `${day} ${hour}:${minute}, `
     }
 
@@ -43,7 +45,9 @@ function enterCity(event) {
     
     let country = document.querySelector("#form-search");
     country.addEventListener("submit", enterCity);
+
     let currentDateElement= document.querySelector("#current-date")
     let currentDate= new Date();
+
     currentDateElement.innerHTML= formatDate(currentDate);
 
